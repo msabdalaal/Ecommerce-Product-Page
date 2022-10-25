@@ -1,44 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header>
+      <div class="dimmer hide"></div>
+      <div class="right">
+        <img
+          src="./images/icon-menu.svg"
+          alt="Menu"
+          class="menu Hide"
+          onclick="showMenu()"
+        />
+        <div class="logo">
+          <img src="./images/logo.svg" alt="Logo" />
+        </div>
+        <nav class="hide show nav">
+          <img
+            src="./images/icon-close.svg"
+            alt="Close"
+            class="close Hide"
+            onclick="hideMenu()"
+          />
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="left">
+        <img
+          src="./images/icon-cart.svg"
+          alt="Shopping Cart"
+          class="cart"
+          onclick="showCart()"
+        />
+        <img
+          src="./images/image-avatar.png"
+          alt="Account Avatar"
+          class="avatar"
+        />
+      </div>
+      <div class="cartMenu hide">
+        <p class="cartp">Cart</p>
+        <div class="items"></div>
+        <button class="cartBtn">Checkout</button>
+        <h2 class="empty hide">Your cart is empty</h2>
+      </div>
+    </header>
+    <main>
+      <div class="mainImage">
+        <img
+          id="mains"
+          name="0"
+          src="./images/image-product-1.jpg"
+          alt="Shoes"
+          class="main"
+          onclick="showLight(this.name)"
+        />
+        <img
+          id="mains"
+          name="1"
+          src="./images/image-product-2.jpg"
+          alt="Shoes"
+          class="main hide"
+          onclick="showLight(this.name)"
+        />
+        <img
+          id="mains"
+          name="2"
+          src="./images/image-product-3.jpg"
+          alt="Shoes"
+          class="main hide"
+          onclick="showLight(this.name)"
+        />
+        <img
+          id="mains"
+          name="3"
+          src="./images/image-product-4.jpg"
+          alt="Shoes"
+          class="main hide"
+          onclick="showLight(this.name)"
+        />
+        <div class="per">
+          <img
+            src="./images/icon-previous.svg"
+            alt="Previous"
+            class="arrow"
+            onclick="per()"
+          />
+        </div>
+        <div class="nex">
+          <img
+            src="./images/icon-next.svg"
+            alt="Previous"
+            class="arrow"
+            onclick="nex()"
+          />
+        </div>
+        <div class="thumbnails hide">
+          <img
+            id="0"
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="shoes1"
+            class="select"
+            onclick="showMain(this.id)"
+          />
+          <img
+            id="1"
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="shoes2"
+            onclick="showMain(this.id)"
+          />
+          <img
+            id="2"
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="shoes3"
+            onclick="showMain(this.id)"
+          />
+          <img
+            id="3"
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="shoes4"
+            onclick="showMain(this.id)"
+          />
+        </div>
+      </div>
+      <div class="info">
+        <h2>SNEAKER COMPANY</h2>
+        <h1 class="itemName">Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price">
+          <div class="right">
+            <h1 class="itemPrice">$125.00</h1>
+            <h2>50%</h2>
+          </div>
+          <div class="left">
+            <p>$250.00</p>
+          </div>
+        </div>
+        <div class="CB">
+          <div class="count">
+            <img src="./images/icon-minus.svg" alt="Minus" onclick="minus()" />
+            <div class="itemCount">0</div>
+            <img src="./images/icon-plus.svg" alt="Plus" onclick="add()" />
+          </div>
+          <button onclick="addItems()">
+            <div class="bcart"></div>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div class="lightView Hide">
+        <div class="content">
+          <img
+            id="light"
+            src="./images/image-product-1.jpg"
+            alt="shoe1"
+            class="hide active"
+          />
+          <img
+            id="light"
+            src="./images/image-product-2.jpg"
+            alt="shoe2"
+            class="hide"
+          />
+          <img
+            id="light"
+            src="./images/image-product-3.jpg"
+            alt="shoe3"
+            class="hide"
+          />
+          <img
+            id="light"
+            src="./images/image-product-4.jpg"
+            alt="shoe4"
+            class="hide"
+          />
+          <div class="thumbnails">
+            <img
+              id="0"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="shoes1"
+              class="hide select"
+              onclick="showMainLight(this.id)"
+            />
+            <img
+              id="1"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="hide shoes2"
+              onclick="showMainLight(this.id)"
+              class="hide"
+            />
+            <img
+              id="2"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="hide shoes3"
+              onclick="showMainLight(this.id)"
+              class="hide"
+            />
+            <img
+              id="3"
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="shoes4"
+              onclick="showMainLight(this.id)"
+              class="hide"
+            />
+          </div>
+          <div class="hide per">
+            <div class="arrow1" onclick="perLigth()"></div>
+          </div>
+          <div class="hide nex">
+            <div class="arrow2" onclick="nexLigth()"></div>
+          </div>
+          <div class="closeLight" onclick="closeLight()"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/msabdalaal">Mohamed Sayed</a>.
+    </footer>
+    <script src="./main.js"></script>
+  </body>
 </html>
