@@ -39,15 +39,12 @@ header {
   z-index: 1;
 }
 
-.right {
+header .right {
+  height: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1rem;
   gap: 1rem;
-}
-header .right {
-  height: 1.3rem;
 }
 .menu {
   height: 100%;
@@ -136,7 +133,7 @@ nav a {
   color: hsl(26, 100%, 55%);
   font-weight: 400;
 }
-.info h1 {
+.itemName {
   font-size: 1.9rem;
 }
 .info p {
@@ -149,7 +146,14 @@ nav a {
   justify-content: space-between;
   margin-top: 1.5rem;
 }
-.price h1 {
+.price .right {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+.itemPrice {
   font-size: 1.8rem;
 }
 .price p {
@@ -269,12 +273,12 @@ button {
 .hide {
   display: none;
 }
-@media (min-width: 1320px) {
+@media (min-width: 1024px) {
   .show {
     display: block;
   }
   body {
-    padding: 0rem 10rem;
+    padding: 0rem 8rem;
   }
   header {
     padding: 0;
@@ -347,8 +351,8 @@ button {
   main {
     display: flex;
     justify-content: center;
-    padding: 3rem 5rem;
-    gap: 6rem;
+    padding: 1rem 3rem 3rem 3rem;
+    gap: 3rem;
   }
   .mainImage {
     width: 100%;
@@ -389,8 +393,11 @@ button {
   .info h2 {
     font-weight: 700;
   }
-  .info h1 {
-    font-size: 2.5rem;
+  .itemName {
+    font-size: 2rem;
+  }
+  .itemPrice {
+    font-size: 1.5rem;
   }
   .count {
     width: 30%;
@@ -433,7 +440,14 @@ button {
     gap: 2rem;
   }
   .price .right {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    gap: 1rem;
     justify-content: flex-start;
+  }
+  .item .right {
+    gap: 1rem;
   }
   .price .left {
     transform: none;
@@ -448,7 +462,7 @@ button {
     top: 5rem;
     right: 0;
     transform: none;
-    width: 20vw;
+    width: 35vw;
   }
   .empty {
     height: 10rem;
@@ -458,6 +472,9 @@ button {
   }
   .cart:hover {
     filter: brightness(0) saturate(100%);
+  }
+  .delete {
+    scale: 0.2;
   }
   .lightView {
     z-index: 100;
