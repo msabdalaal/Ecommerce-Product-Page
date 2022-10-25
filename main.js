@@ -47,6 +47,7 @@ let items = document.querySelector(".items");
 let itemName = document.querySelector(".itemName");
 let itemPrice = document.querySelector(".itemPrice");
 let div = document.createElement("div");
+let cartCount = document.querySelector(".counter");
 let addItems = () => {
   if (items.innerHTML != "") {
     alert("Already added");
@@ -69,6 +70,8 @@ let addItems = () => {
             </div>
             `;
       items.appendChild(div);
+      cartCount.classList.remove("hide");
+      cartCount.innerHTML = counter;
     }
   }
   itemCount.innerHTML = +0;
@@ -85,6 +88,7 @@ let deleteItem = (elem) => {
     empty.classList.add("hide");
     cartBtn.classList.remove("hide");
   }
+  cartCount.classList.add("hide");
 };
 
 let mains = document.querySelectorAll("#mains");

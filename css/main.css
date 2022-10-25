@@ -171,7 +171,7 @@ nav a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: hsl(25, 100%, 94%);
+  background-color: hsl(223, 64%, 98%);
   border-radius: 0.5rem;
   margin-top: 1.5rem;
   height: 3rem;
@@ -224,6 +224,23 @@ button {
   font-weight: 700;
   margin-bottom: 1rem;
   width: 100%;
+}
+.counter {
+  position: absolute;
+  transform: translate(-0.6rem, -0.5rem);
+  background-color: hsl(26, 100%, 55%);
+  width: 1.2rem;
+  height: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 0.3rem;
+}
+.counter:hover {
+  cursor: pointer;
 }
 .item {
   display: flex;
@@ -463,6 +480,12 @@ button {
     right: 0;
     transform: none;
     width: 35vw;
+  }
+  .counter{
+    width: 0.8rem;
+    height: 0.6rem;
+    font-size: 0.4rem;
+    transform: translate(-0.9rem,-0.4rem);
   }
   .empty {
     height: 10rem;
