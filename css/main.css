@@ -266,6 +266,10 @@ button {
 .delete {
   scale: 0.3;
 }
+.delete:hover {
+  cursor: pointer;
+}
+
 .itemInfo {
   display: flex;
   flex-direction: column;
@@ -481,11 +485,11 @@ button {
     transform: none;
     width: 35vw;
   }
-  .counter{
+  .counter {
     width: 0.8rem;
     height: 0.6rem;
     font-size: 0.4rem;
-    transform: translate(-0.9rem,-0.4rem);
+    transform: translate(-0.9rem, -0.4rem);
   }
   .empty {
     height: 10rem;
