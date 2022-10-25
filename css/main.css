@@ -183,7 +183,6 @@ nav a {
 .CB {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 button {
   display: flex;
@@ -199,6 +198,7 @@ button {
   font-size: 0.8rem;
   border-radius: 0.5rem;
   margin-bottom: 3rem;
+  margin-top: 1.5rem;
 }
 .bcart {
   width: 1.5rem;
