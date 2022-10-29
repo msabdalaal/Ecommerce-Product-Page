@@ -7,6 +7,15 @@
   box-sizing: border-box; /* Opera/IE 8+ */
   list-style-type: none;
   text-decoration: none;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 body {
   min-width: 260px;
